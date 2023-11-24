@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - ./mqtt-config/:/mosquitto/config/:ro
+    ports:
+      - '1882:1883'
